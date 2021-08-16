@@ -55,9 +55,6 @@ hub.Name = "hub"
 hub.Parent = game:GetService("CoreGui")
 hub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-darkmode_2.Name = "darkmode"
-darkmode_2.Parent = hub.main
-
 main.Name = "main"
 main.Parent = hub
 main.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -67,6 +64,9 @@ main.Size = UDim2.new(0.352941185, 0, 0.385276079, 0)
 main.Visible = false
 
 UICorner.Parent = main
+
+darkmode_2.Name = "darkmode"
+darkmode_2.Parent = main
 
 TextLabel.Parent = main
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
