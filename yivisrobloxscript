@@ -500,8 +500,8 @@ local function LGTSP_fake_script() -- settings.LocalScript
 		return req(obj)
 	end
 
-	script.Parent.Parent.Parent.darkmode.Changed:Connect(function()
-		if script.Parent.Parent.Parent.darkmode.Value == true then
+	script.Parent.Parent.Parent:WaitForChild("darkmode").Changed:Connect(function()
+		if script.Parent.Parent.Parent:WaitForChild("darkmode").Value == true then
 			script.Parent.BackgroundColor3 = Color3.fromRGB(25,25,25)
 			script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
 		else
