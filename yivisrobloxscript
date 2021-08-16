@@ -535,17 +535,17 @@ local function QOHBDCI_fake_script() -- darkmode.LocalScript
 			dark = true
 			script.Parent.on.Visible = true
 			script.Parent.off.Visible = false
-			g.darkmode.Value = true
+			g:WaitForChild("darkmode").Value = true
 		else
 			dark = false
 			script.Parent.on.Visible = false
 			script.Parent.off.Visible = true
-			g.darkmode.Value = false
+			g:WaitForChild("darkmode").Value = false
 		end
 	end)
 	
-	g.darkmode.Changed:Connect(function()
-		if g.darkmode.Value == true then
+	g:WaitForChild("darkmode").Changed:Connect(function()
+		if g:WaitForChild("darkmode").Value == true then
 			script.Parent.Frame.BackgroundColor3 = Color3.fromRGB(255,255,255)
 			script.Parent.Parent.TextLabel.TextColor3 = Color3.fromRGB(255,255,255)
 		else
