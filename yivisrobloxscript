@@ -504,8 +504,8 @@ local function LGTSP_fake_script() -- settings.LocalScript
 		return req(obj)
 	end
 
-	darkmode.Changed:Connect(function()
-		if darkmode.Value == true then
+	darkmode_2.Changed:Connect(function()
+		if darkmode_2.Value == true then
 			script.Parent.BackgroundColor3 = Color3.fromRGB(25,25,25)
 			script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
 		else
@@ -521,7 +521,7 @@ local function LGTSP_fake_script() -- settings.LocalScript
 end
 coroutine.wrap(LGTSP_fake_script)()
 local function QOHBDCI_fake_script() -- darkmode.LocalScript 
-	local script = Instance.new('LocalScript', darkmode_2)
+	local script = Instance.new('LocalScript', darkmode)
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -570,8 +570,8 @@ local function DAKM_fake_script() -- main.Main
 		return req(obj)
 	end
 
-	script.Parent.darkmode.Changed:Connect(function()
-		if script.Parent.darkmode.Value == true then
+	darkmode_2.Changed:Connect(function()
+		if darkmode_2.Value == true then
 			script.Parent.TextLabel.TextColor3 = Color3.fromRGB(255,255,255)
 			script.Parent.BackgroundColor3 = Color3.fromRGB(30,30,30)
 			script.Parent.game.TextColor3 = Color3.fromRGB(255,255,255)
