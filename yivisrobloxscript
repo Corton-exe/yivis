@@ -500,8 +500,8 @@ local function LGTSP_fake_script() -- settings.LocalScript
 		return req(obj)
 	end
 
-	script.Parent.Parent.Parent:WaitForChild("darkmode").Changed:Connect(function()
-		if script.Parent.Parent.Parent:WaitForChild("darkmode").Value == true then
+	hub.main:WaitForChild("darkmode").Changed:Connect(function()
+		if hub.main:WaitForChild("darkmode").Value == true then
 			script.Parent.BackgroundColor3 = Color3.fromRGB(25,25,25)
 			script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
 		else
@@ -528,7 +528,7 @@ local function QOHBDCI_fake_script() -- darkmode.LocalScript
 	end
 
 	local dark = false
-	local g = script.Parent.Parent.Parent.Parent
+	local g = hub.main
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if dark == false then
